@@ -1,0 +1,11 @@
+/Users/Howz/Projects/HowzWebRazor001/HowzWebRazor001/bin/Debug/netcoreapp2.0/HowzWebRazor001.deps.json
+/Users/Howz/Projects/HowzWebRazor001/HowzWebRazor001/bin/Debug/netcoreapp2.0/HowzWebRazor001.runtimeconfig.json
+/Users/Howz/Projects/HowzWebRazor001/HowzWebRazor001/bin/Debug/netcoreapp2.0/HowzWebRazor001.runtimeconfig.dev.json
+/Users/Howz/Projects/HowzWebRazor001/HowzWebRazor001/bin/Debug/netcoreapp2.0/HowzWebRazor001.dll
+/Users/Howz/Projects/HowzWebRazor001/HowzWebRazor001/bin/Debug/netcoreapp2.0/HowzWebRazor001.pdb
+/Users/Howz/Projects/HowzWebRazor001/HowzWebRazor001/obj/Debug/netcoreapp2.0/HowzWebRazor001.csprojResolveAssemblyReference.cache
+/Users/Howz/Projects/HowzWebRazor001/HowzWebRazor001/obj/Debug/netcoreapp2.0/HowzWebRazor001.csproj.CoreCompileInputs.cache
+/Users/Howz/Projects/HowzWebRazor001/HowzWebRazor001/obj/Debug/netcoreapp2.0/HowzWebRazor001.AssemblyInfoInputs.cache
+/Users/Howz/Projects/HowzWebRazor001/HowzWebRazor001/obj/Debug/netcoreapp2.0/HowzWebRazor001.AssemblyInfo.cs
+/Users/Howz/Projects/HowzWebRazor001/HowzWebRazor001/obj/Debug/netcoreapp2.0/HowzWebRazor001.dll
+/Users/Howz/Projects/HowzWebRazor001/HowzWebRazor001/obj/Debug/netcoreapp2.0/HowzWebRazor001.pdb
