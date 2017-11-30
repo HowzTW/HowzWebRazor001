@@ -42,10 +42,23 @@ namespace HowzWebRazor001.Pages
                 Console.WriteLine($"Saved {task.Key.Path[0].Name}: {(string)task["description"]}");
             }
 
+            Query query = new Query("Beer")
+            {
+                Filter = Filter.Equal("Brand", "TOOL")
+            };
+            foreach (Entity entity in db.RunQueryLazily(query))
+            {
+                string beerBrand = (string)entity["Brand"];
+                string beerName = (string)entity["Name"];
+                int beerCost = (int)entity["Cost"];
+                int beerPrice = (int)entity["Price"];
+                DateTime beerStockDate = (DateTime)entity["StockDate"];
+                Console.WriteLine("Brand:{0} Name:{1} Cost:{2} Price:{3} StockDate:{4} ", 
+                                  beerBrand, beerName, beerCost, beerPrice, beerStockDate);
+            }
 
 
-
-            Message = "Your Goole Cloud Platform Test page. (測試task)";
+            Message = "Your Goole Cloud Platform Test page. (測試task and beer)";
         }
     }
 }
