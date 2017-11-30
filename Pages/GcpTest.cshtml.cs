@@ -20,6 +20,8 @@ namespace HowzWebRazor001.Pages
             // Instantiates a client
             DatastoreDb db = DatastoreDb.Create(projectId);
 
+
+            /* *****************************************************************
             // The kind for the new entity
             string kind = "Task";
             // The name/ID for the new entity
@@ -41,6 +43,8 @@ namespace HowzWebRazor001.Pages
 
                 Console.WriteLine($"Saved {task.Key.Path[0].Name}: {(string)task["description"]}");
             }
+            ***************************************************************** */
+
 
             Query query = new Query("Beer")
             {
