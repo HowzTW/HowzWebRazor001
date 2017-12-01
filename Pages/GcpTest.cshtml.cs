@@ -74,11 +74,18 @@ namespace HowzWebRazor001.Pages
                 string beerName = (string)entity["Name"];
                 int beerCost = (int)entity["Cost"];
                 int beerPrice = (int)entity["Price"];
+
                 DateTime beerStockDate = (DateTime)entity["StockDate"];
-                //string beerType = (string)entity["type"];
-                string beerKind = (string)entity["type"];
-                Console.WriteLine("Brand:{0} Name:{1} Cost:{2} Price:{3} StockDate:{4} Kind:{5} ", 
-                                  beerBrand, beerName, beerCost, beerPrice, beerStockDate, beerKind);
+
+                Console.WriteLine("Brand:{0} Name:{1} Cost:{2} Price:{3} StockDate:{4} ", 
+                                  beerBrand, beerName, beerCost, beerPrice, beerStockDate);
+                
+                entity.Key = db.CreateKeyFactory("Task").CreateIncompleteKey();
+                entity["Brand"] = beerBrand + " again";
+                var keys = db.Upsert(new[] { entity });
+                Console.WriteLine("Beer Id: {0}", keys.First().Path.First().Id);
+
+
             }
 
 
