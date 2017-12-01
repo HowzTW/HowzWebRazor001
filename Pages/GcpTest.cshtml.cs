@@ -75,16 +75,16 @@ namespace HowzWebRazor001.Pages
                 int beerCost = (int)entity["Cost"];
                 int beerPrice = (int)entity["Price"];
                 DateTime beerStockDate = (DateTime)entity["StockDate"];
-                Console.WriteLine("Brand:{0} Name:{1} Cost:{2} Price:{3} StockDate:{4} ", 
-                                  beerBrand, beerName, beerCost, beerPrice, beerStockDate);
-
-                entity["Brand"] = beerBrand+" Again";
-                var keys = db.Insert(new[] { entity });
-                Console.WriteLine("Beer Id: {0}", keys.First().Path.First().Id);
+                //string beerType = (string)entity["type"];
+                string beerKind = (string)entity["kind"];
+                Console.WriteLine("Brand:{0} Name:{1} Cost:{2} Price:{3} StockDate:{4} Kind:{5} ", 
+                                  beerBrand, beerName, beerCost, beerPrice, beerStockDate, beerKind);
             }
 
 
-            Message = "Your Goole Cloud Platform Test page. (測試task and beer)";
+
+
+            Message = "Your Goole Cloud Platform Test page. (測試beer)";
         }
     }
 }
