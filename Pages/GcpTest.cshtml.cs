@@ -76,7 +76,7 @@ namespace HowzWebRazor001.Pages
                 int beerPrice = (int)entity["Price"];
                 DateTime beerStockDate = (DateTime)entity["StockDate"];
                 //string beerType = (string)entity["type"];
-                string beerKind = (string)entity["kind"];
+                string beerKind = (string)entity["type"];
                 Console.WriteLine("Brand:{0} Name:{1} Cost:{2} Price:{3} StockDate:{4} Kind:{5} ", 
                                   beerBrand, beerName, beerCost, beerPrice, beerStockDate, beerKind);
             }
