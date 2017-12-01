@@ -50,13 +50,13 @@ namespace HowzWebRazor001.Pages
             }
             ***************************************************************** */
 
-            var task = new Entity
-            {
-                Key = db.CreateKeyFactory("Task").CreateIncompleteKey(),
-                ["description"] = "買牛奶"
-            };
-            var keys = db.Insert(new[] { task });
-            Console.WriteLine("Task Id: {0}", keys.First().Path.First().Id);
+            //var task = new Entity
+            //{
+            //    Key = db.CreateKeyFactory("Task").CreateIncompleteKey(),
+            //    ["description"] = "買牛奶"
+            //};
+            //var keys = db.Insert(new[] { task });
+            //Console.WriteLine("Task Id: {0}", keys.First().Path.First().Id);
 
 
             //var entity = book.ToEntity();
@@ -77,6 +77,10 @@ namespace HowzWebRazor001.Pages
                 DateTime beerStockDate = (DateTime)entity["StockDate"];
                 Console.WriteLine("Brand:{0} Name:{1} Cost:{2} Price:{3} StockDate:{4} ", 
                                   beerBrand, beerName, beerCost, beerPrice, beerStockDate);
+
+                entity["Brand"] = beerBrand+" Again";
+                var keys = db.Insert(new[] { entity });
+                Console.WriteLine("Beer Id: {0}", keys.First().Path.First().Id);
             }
 
 
