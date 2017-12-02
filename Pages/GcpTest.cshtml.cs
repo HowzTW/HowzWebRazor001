@@ -64,17 +64,14 @@ namespace HowzWebRazor001.Pages
                 string beerName = (string)entity["Name"];
                 int beerCost = (int)entity["Cost"];
                 int beerPrice = (int)entity["Price"];
-
                 DateTime beerStockDate = (DateTime)entity["StockDate"];
-
                 Console.WriteLine("Brand:{0} Name:{1} Cost:{2} Price:{3} StockDate:{4} ", 
                                   beerBrand, beerName, beerCost, beerPrice, beerStockDate);
                 
-                entity.Key = db.CreateKeyFactory("Task").CreateIncompleteKey();
+                entity.Key = db.CreateKeyFactory("Beer").CreateIncompleteKey();
                 entity["Brand"] = beerBrand + " again";
                 var keys = db.Upsert(new[] { entity });
                 Console.WriteLine("Beer Id: {0}", keys.First().Path.First().Id);
-
 
             }
 
@@ -82,15 +79,21 @@ namespace HowzWebRazor001.Pages
             var task = new Entity
             {
                 Key = db.CreateKeyFactory("Task").CreateIncompleteKey(),
-                ["description"] = "買牛奶"
+                ["memo"] = "買牛奶"
             };
             var taskkeys = db.Insert(new[] { task });
             Console.WriteLine("Task Id: {0}", taskkeys.First().Path.First().Id);
 
-        
+            var employee = new Entity
+            {
+                Key = db.CreateKeyFactory("Employee").CreateIncompleteKey(),
+                ["PersonId"] = "A123901930",
+                ["Name"] = "陳小寶"
+            };
+            var employeeKeys = db.Insert(new[] { employee });
+            Console.WriteLine("Employee Id: {0}, Employee Kind: {1}", employeeKeys.First().Path.First().Id, employeeKeys.First().Path.First().Kind);
 
-
-            Message = "Your Goole Cloud Platform Test page. (測試beer and task)";
+            Message = "Your Goole Cloud Platform Test page. (測試beer and task and employee)";
         }
     }
 }
