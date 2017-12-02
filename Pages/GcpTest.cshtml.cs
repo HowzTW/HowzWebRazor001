@@ -50,19 +50,9 @@ namespace HowzWebRazor001.Pages
             }
             ***************************************************************** */
 
-            //var task = new Entity
-            //{
-            //    Key = db.CreateKeyFactory("Task").CreateIncompleteKey(),
-            //    ["description"] = "買牛奶"
-            //};
-            //var keys = db.Insert(new[] { task });
-            //Console.WriteLine("Task Id: {0}", keys.First().Path.First().Id);
+ 
 
 
-            //var entity = book.ToEntity();
-            //entity.Key = _db.CreateKeyFactory("Book").CreateIncompleteKey();
-            //var keys = _db.Insert(new[] { entity });
-            //book.Id = keys.First().Path.First().Id;
 
             Query query = new Query("Beer")
             {
@@ -89,9 +79,18 @@ namespace HowzWebRazor001.Pages
             }
 
 
+            var task = new Entity
+            {
+                Key = db.CreateKeyFactory("Task").CreateIncompleteKey(),
+                ["description"] = "買牛奶"
+            };
+            var taskkeys = db.Insert(new[] { task });
+            Console.WriteLine("Task Id: {0}", taskkeys.First().Path.First().Id);
+
+        
 
 
-            Message = "Your Goole Cloud Platform Test page. (測試beer)";
+            Message = "Your Goole Cloud Platform Test page. (測試beer and task)";
         }
     }
 }
