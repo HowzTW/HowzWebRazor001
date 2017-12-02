@@ -16,5 +16,11 @@
     <Compile Update="Pages\GcpTest.cshtml.cs">
       <DependentUpon>GcpTest.cshtml</DependentUpon>
     </Compile>
+    <Compile Update="Pages\Employee\Index.cshtml.cs">
+      <DependentUpon>Index.cshtml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Pages\Employee\" />
   </ItemGroup>
 </Project>
