@@ -1,5 +1,11 @@
 ﻿@page
 @model IndexModel
 @{
+    ViewData["Title"] = "員工資料維護"；
 }
-員工資料維護
+
+<h2>@ViewData["Title"]</h2>
+<h3>@Model.Message</h3>
+
+<input type="button" onclick="/Employee/Add" value="新增" />
+共有 @Model.Employees.Count 筆員工資料
