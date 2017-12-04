@@ -19,6 +19,9 @@
     <Compile Update="Pages\Employee\Index.cshtml.cs">
       <DependentUpon>Index.cshtml</DependentUpon>
     </Compile>
+    <Compile Update="Pages\Employee\Add.cshtml.cs">
+      <DependentUpon>Add.cshtml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Pages\Employee\" />
