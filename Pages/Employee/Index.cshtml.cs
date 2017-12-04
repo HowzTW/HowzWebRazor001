@@ -23,7 +23,7 @@ namespace HowzWebRazor001.Pages.Employee
             int count = allEmployee.Count();
             Employees = allEmployee.ToList();
 
-            Message = "共有 " + count + " 筆員工資料";
+            Message = "員工資料新增/修改/刪除作業";
         }
     }
 }
